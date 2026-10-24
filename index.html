@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- Generated from PRIVACY.md by scripts/generate-privacy.mjs. Do not edit directly. -->
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>PhrasePilot 隐私说明</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f7f8fc; color: #20263a; font-family: system-ui, sans-serif; line-height: 1.8; }
+    main { max-width: 780px; margin: 40px auto; padding: 36px; background: #fff; border-top: 6px solid #5b54d6; border-radius: 12px; }
+    h1 { margin-top: 0; font-size: 1.85rem; line-height: 1.4; }
+    h2 { margin-top: 2rem; font-size: 1.2rem; }
+    p, a, code { overflow-wrap: anywhere; }
+    a { color: #4740bd; text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid #5b54d6; outline-offset: 4px; }
+    code { padding: 2px 5px; background: #f0efff; border-radius: 4px; }
+    aside { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #e3e7ef; color: #50586b; font-size: .9rem; }
+    @media (max-width: 600px) { main { margin: 0; padding: 24px 18px; border-radius: 0; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <main>
+<h1>PhrasePilot 隐私说明</h1>
+<p>最后更新日期：2026-10-24</p>
+<h2>用途与适用范围</h2>
+<p>PhrasePilot 是用于保存、搜索、复制和管理常用文字片语及 AI 提示词的 Chrome 扩展。本说明描述当前 0.1.4 版本扩展自身的数据处理行为，不涵盖 Chrome 浏览器、操作系统或用户自行使用的其他应用和服务。</p>
+<h2>本地处理与存储</h2>
+<p>扩展在本地处理用户输入的标题、分类、正文，以及收藏和置顶状态，用于显示、搜索、筛选、编辑和排序。保存的记录还包含记录 ID 和创建时间；导入记录中已有的额外字段也会保留。</p>
+<p>已保存的记录通过 Chrome 的 <code>chrome.storage.local</code> 保存在当前浏览器配置的扩展本地存储中。扩展不会将旧标题、正文、分类或额外字段自动转换为简体中文。</p>
+<p>本地处理和存储不等于开发者收集或接收这些内容。当前扩展没有连接开发者服务器的功能，不向开发者上传片语、搜索内容或使用记录，也没有向第三方共享这些数据的功能。扩展未集成分析追踪、广告或远程代码加载；界面使用随扩展提供的本地脚本、样式和图标资源。</p>
+<h2>剪贴板</h2>
+<p>只有在用户点击「复制内容」或「复制标题与正文」后，扩展才向系统剪贴板写入对应文字。扩展不读取剪贴板内容。用户之后将文字粘贴到其他应用或服务的行为，不属于本扩展的数据处理范围。</p>
+<h2>导入与导出</h2>
+<p>用户主动选择导入文件后，扩展读取所选文件，在本地验证并合并其中的片语记录，不上传文件内容。</p>
+<p>用户点击「导出备份」后，扩展生成供浏览器下载的明文 JSON 文件，包含全部已保存片语的完整标题、分类、正文、收藏和置顶状态（如记录中存在），以及记录 ID、创建时间和其他已有字段；导出不受搜索或收藏筛选影响。文件还包含备份格式、扩展版本和导出时间。</p>
+<p>备份文件由用户自行保管。能访问该文件的人可以读取其中内容；扩展不提供备份加密或自动云备份。</p>
+<h2>删除与保留</h2>
+<p>用户可在片语卡片上点击「删除」，删除对应的本地记录。删除成功后列表才会更新；保存失败时会显示提示，原有记录仍保留，可重试。</p>
+<p>删除扩展内的记录不会删除用户先前导出的备份文件。若希望移除备份中的内容，需要用户自行管理或删除相应文件。</p>
+<p>当前扩展没有云同步。未保存的新增或编辑草稿仅保留在本次弹窗的内存中，关闭弹窗后消失。扩展不保证数据永久保存或在丢失后能够恢复。</p>
+<h2>权限用途</h2>
+<p>当前版本仅声明 <code>storage</code> 权限，用于读取和保存片语记录，包括收藏与置顶状态。扩展没有使用该权限将数据同步到云端或发送给开发者。</p>
+<h2>联系我们</h2>
+<p>如有功能反馈或隐私咨询，可发送邮件至 <a href="mailto:tiankong57369@gmail.com">tiankong57369@gmail.com</a>。</p>
+<p>请不要发送密码、验证码或包含敏感内容的完整备份。主动发送的邮件会将其中的信息提供给支持邮箱，这与扩展在本地处理片语的行为不同。</p>
+    <aside aria-label="网页托管说明">
+      <p>网页托管与扩展不同：本说明网页由 GitHub Pages 托管。访问网页会让浏览器向 GitHub 托管服务发送访问请求；这不代表扩展上传片语。本页没有追踪、广告、脚本或表单，也不读取扩展中的数据。点击邮箱链接并发送邮件，是用户主动联系支持邮箱的另一项行为。</p>
+    </aside>
+  </main>
+</body>
+</html>
